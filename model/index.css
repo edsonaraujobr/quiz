@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'SweetieBubble';
+    src: url('../fonts/SweetieBubbleGum-Regular.ttf') format('truetype');
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+:root {
+    --font01: 'SweetieBubble', sans-serif;
+    --font02: Arial, Helvetica, sans-serif;
+    --corprincipal: #3A2BD9;
+    --corsecundaria: #2B54D9;
+    --corauxiliar: #2B8BD9;
+    --corbranca: #fff;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../imagens/fundo.png');
+    background-size: cover;
+}
+
+header {
+    text-align: center;
+    padding-bottom: 80px;
+}
+
+h1 {
+    font-family: var(--font01);
+    font-weight: normal;
+    font-size: 4em;
+    color: var(--corprincipal);
+}
+
+@media (max-width: 700px) {
+    h1 {
+        font-size: 3.2em;
+    }
+}
+
+
+main > div#button {
+    gap: 10px
+    ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    width: 200px;
+    height: 50px;
+    color: var(--corbranca);
+    background-color: var(--corprincipal);
+    font-family: var(--font01);
+    font-size: 1.2em;
+}
+
+button:hover {
+    background-color: var(--corsecundaria);
+}
+
+footer {
+    padding-top: 80px;
+    text-align: center;
+    font-family: var(--font02);
+    font-weight: bold;
+}
+
+footer, p {
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
