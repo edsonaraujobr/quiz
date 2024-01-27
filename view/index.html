@@ -7,21 +7,39 @@
     <title>QuizScript</title>
 </head>
 <body>
-    <header>
-        <h1>QuizScript</h1>
-    </header>
-
-    <main>
-        <div id="button">
-            <audio src="../audios/buttonEfeito.mp3" class="enter"></audio>
-            <button type="button" class="efeitosonoro">Começar</button>
-            <button type="button" class="efeitosonoro">Como jogar</button>
-            <button type="button" class="efeitosonoro">Créditos</button>
+    <!--Essa div só vai aparecer quando o usuario clicar no button Iniciar-->
+     <div class="pergunta" style="display: none;">
+        <p>Faça Sua Pergunta aqui lorem sdfsgdsgsdgsd gsdgsdgsdg sdgsdgsdgs gsdgsgsgsgs gsgs</p>
+        <div class="respostas">
+            <div>
+                <button type="button">Resposta 1</button>
+                <button type="button">Resposta 2</button>
+                <button type="button">Resposta 3</button>
+                <button type="button">Resposta 4</button>
+            </div>
         </div>
-    </main>
-    <footer>
-        <p>Projeto desenvolvido pelo <strong>Squad 04</strong> para o módulo 01 &copy;</p>
-    </footer>
+    </div>
+
+    <!--Essa é a primeira div que aparece-->
+    <div id="telaInicial">
+        <audio src="../audios/musicadetema.mp3" autoplay loop id="audioTema"></audio>
+        <audio src="../audios/buttonEfeito.mp3"></audio>
+        <audio src="../audios/startEfeito.mp3"></audio>
+
+        <header>
+            <h1>QuizScript</h1>
+        </header>
+        <main>
+            <div id="button">
+                <button type="button" id="efeitosonoro" onclick="clicouEmComecar()">Começar</button>
+                <button type="button" id="efeitosonoro2">Como jogar</button>
+                <button type="button" id="efeitosonoro3">Créditos</button>
+            </div>
+        </main>
+        <footer>
+            <p>Projeto desenvolvido pelo <strong>Squad 04</strong> para o módulo 01 &copy;</p>
+        </footer>
+    </div>
 
     <script src="../controller/index.js"></script>
 </body>

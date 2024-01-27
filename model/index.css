@@ -18,11 +18,20 @@
 }
 
 body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#telaInicial {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    width: 100vw;
     background-image: url('../imagens/fundo.png');
     background-size: cover;
 }
@@ -37,18 +46,17 @@ h1 {
     font-weight: normal;
     font-size: 4em;
     color: var(--corprincipal);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
 
 @media (max-width: 700px) {
-    h1 {
+    #telainicial , h1 {
         font-size: 3.2em;
     }
 }
 
-
 main > div#button {
-    gap: 10px
-    ;
+    gap: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -62,6 +70,7 @@ button {
     background-color: var(--corprincipal);
     font-family: var(--font01);
     font-size: 1.2em;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.171);
 }
 
 button:hover {
@@ -78,5 +87,65 @@ footer {
 footer, p {
     padding-left: 20px;
     padding-right: 20px;
+}
 
+
+/* Configuração para as perguntas */
+.pergunta {
+    padding: 20px;
+    text-align: center;
+    color: var(--corbranca);
+    font-family: var(--font02);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--corprincipal);
+    width: 600px;
+    height: 200px;
+    border-radius: 20px;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.459);
+    > p {
+        font-family: var(--font02);
+        font-size: 1.5em;
+        padding-bottom: 30px;
+    }
+
+    button {
+        background-color: var(--corbranca);
+        color: var(--corprincipal);
+        border-radius: 10px;
+        margin-bottom: 10px;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.171);
+    }
+
+    button:hover {
+        background-color: var(--corprincipal);
+        color: var(--corbranca);
+    }
+
+    .respostas {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (max-width: 500px) {
+    .pergunta {
+        width: 300px;
+        height: 500px;
+    }
+
+    button {
+        width: 250px;
+        height: 60px;
+        margin-right: 0px;
+    }
+
+    p {
+        font-size: 1.3em;
+    }
 }
