@@ -8,7 +8,7 @@ let instructions = document.querySelector('#instructions');
 let pergunta1 = document.querySelector('#pergunta1')
 let pergunta2 = document.querySelector('#pergunta2')
 let pergunta3 = document.querySelector('#pergunta3')
-
+const nome = prompt("Digite seu nome");
 
 // Esse audio vão tocar quando o usuario passar o mause nos buttons
 buttonComeçar.addEventListener('mouseenter', () => {
@@ -45,13 +45,13 @@ function clicouEmComoJogar() {
 }
 
 function acertouAPergunta1() {
-    alert("Você acertou a pergunta, vamos para a proxima questão")
+    alert(`${nome} parabéns,voce acertou! vamos para a proxima questão?`)
     pergunta1.style.display ='none';
     pergunta2.style.display ='flex';
 }
 
 function errouAPergunta() {
-    alert("Você errou, tente novamente")
+    alert(`${nome},você errou, tente novamente`)
     pergunta1.style.display ='none';
     pergunta2.style.display ='none';
     pergunta3.style.display ='none';
@@ -60,13 +60,13 @@ function errouAPergunta() {
 
 }
 function acertouAPergunta2() {
-    alert("Você acertou a pergunta, vamos para a proxima questão")
+    alert(`${nome} parabéns,voce acertou! vamos para a proxima questão?`)
     pergunta2.style.display ='none';
     pergunta3.style.display ='flex';
   }
 
   function acertouAPergunta3() {
-    alert("Parabéns você acertou todas as questões")
+    alert(`${nome} parabéns por ter chegado até aqui!`)
     pergunta3.style.display ='none'
     telaInicial.style.display = 'flex';
     console.log("Acertou")
