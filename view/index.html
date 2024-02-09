@@ -9,7 +9,7 @@
 </head>
 <body>
     <!--Essa é a primeira div que aparece-->
-    <div id="telaInicial">
+    <div id="telaInicial" style="display: none;">
       <audio src="../audios/musicadetema.mp3" autoplay loop></audio>
       <audio src="../audios/buttonEfeito.mp3"></audio>
       <audio src="../audios/startEfeito.mp3"></audio>
@@ -172,6 +172,16 @@
         </div>
       </section>
 
-    <script src="../controller/index.js"></script>
+      <div class="pergunta" >
+        <p>Qual o principal tipo de dado no Javascript?</p>
+        <div class="respostas">
+            <div>
+                <button type="button">Int</button>
+                <button type="button">Char</button>
+                <button type="button">String</button>
+                <button type="button">Long</button>
+            </div>
+        </div>
+    </div><script src="../controller/index.js"></script>
 </body>
 </html>
