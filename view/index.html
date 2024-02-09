@@ -8,6 +8,27 @@
     <title>QuizScript</title>
 </head>
 <body>
+    <!--Essa é a primeira div que aparece-->
+    <div id="telaInicial">
+      <audio src="../audios/musicadetema.mp3" autoplay loop></audio>
+      <audio src="../audios/buttonEfeito.mp3"></audio>
+      <audio src="../audios/startEfeito.mp3"></audio>
+
+      <header>
+          <h1>QuizScript</h1>
+      </header>
+      <main>
+          <div id="button">
+              <button type="button" id="efeitosonoro" onclick="clicouEmComecar()">Começar</button>
+              <button type="button" id="efeitosonoro2">Como jogar</button>
+              <button type="button" id="efeitosonoro3">Créditos</button>
+          </div>
+      </main>
+      <footer>
+          <p>Projeto desenvolvido pelo <strong>Squad 04</strong> para o módulo 01 &copy;</p>
+      </footer>
+  </div>
+
     <!--Essa div só vai aparecer quando o usuario clicar no button Iniciar-->
      <div class="pergunta" style="display: none;">
         <p>Fazem parte dos elementos do javascript, exceto?</p>
@@ -21,27 +42,6 @@
         </div>
     </div>
 
-    <!--Essa é a primeira div que aparece-->
-    <div id="telaInicial" >
-        <audio src="../audios/musicadetema.mp3" autoplay loop></audio>
-        <audio src="../audios/buttonEfeito.mp3"></audio>
-        <audio src="../audios/startEfeito.mp3"></audio>
-
-        <header>
-            <h1>QuizScript</h1>
-        </header>
-        <main>
-            <div id="button">
-                <button type="button" id="efeitosonoro" onclick="clicouEmComecar()">Começar</button>
-                <button type="button" id="efeitosonoro2">Como jogar</button>
-                <button type="button" id="efeitosonoro3">Créditos</button>
-            </div>
-        </main>
-        <footer>
-            <p>Projeto desenvolvido pelo <strong>Squad 04</strong> para o módulo 01 &copy;</p>
-        </footer>
-    </div>
-    
     <!--Essa div só vai aparecer quando o usuario clicar no button Como jogar-->
     <section id="instructions" style="display: none;">
         <div class="main">
@@ -110,6 +110,7 @@
           </div>
         </div>
       </section>
+
     <!--Essa div só vai aparecer quando o usuario clicar no button credits-->
       <section id="credits" style="display: none;">
         <div class="about">
@@ -170,6 +171,7 @@
           </div>
         </div>
       </section>
+
     <script src="../controller/index.js"></script>
 </body>
 </html>
