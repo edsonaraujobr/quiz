@@ -9,7 +9,7 @@
 </head>
 <body>
     <!--Essa é a primeira div que aparece-->
-    <div id="telaInicial" style="display: none;">
+    <div id="telaInicial">
       <audio src="../audios/musicadetema.mp3" autoplay loop></audio>
       <audio src="../audios/buttonEfeito.mp3"></audio>
       <audio src="../audios/startEfeito.mp3"></audio>
@@ -20,8 +20,8 @@
       <main>
           <div id="button">
               <button type="button" id="efeitosonoro" onclick="clicouEmComecar()">Começar</button>
-              <button type="button" id="efeitosonoro2">Como jogar</button>
-              <button type="button" id="efeitosonoro3">Créditos</button>
+              <button type="button" id="efeitosonoro2" onclick="clicouEmComoJogar()">Como jogar</button> 
+              <button type="button" id="efeitosonoro3" onclick="clicouEmCreditos()">Créditos</button>
           </div>
       </main>
       <footer>
@@ -30,14 +30,14 @@
   </div>
 
     <!--Essa div só vai aparecer quando o usuario clicar no button Iniciar-->
-     <div class="pergunta" style="display: none;">
+     <div class="pergunta" style="display: none;" id="pergunta1">
         <p>Fazem parte dos elementos do javascript, exceto?</p>
         <div class="respostas">
             <div>
-                <button type="button">Var</button>
-                <button type="button">Console.log()</button>
-                <button type="button">Justify-content</button>
-                <button type="button">Linguagem de alto nível</button>
+                <button type="button" onclick="errouAPergunta()">Var</button>
+                <button type="button" onclick="errouAPergunta()">Console.log() </button>
+                <button type="button" onclick="errouAPergunta()">Justify-content </button>
+                <button type="button" onclick="acertouAPergunta1()">Linguagem de alto nível</button>
             </div>
         </div>
     </div>
@@ -172,26 +172,26 @@
         </div>
       </section>
 
-      <div class="pergunta" style="display:none" >
+      <div class="pergunta" style="display:none" id="pergunta2">
         <p>Qual o principal tipo de dado no Javascript?</p>
         <div class="respostas">
             <div>
-                <button type="button">Int</button>
-                <button type="button">Char</button>
-                <button type="button">String</button>
-                <button type="button">Long</button>
+                <button type="button" onclick="errouAPergunta()">Int</button>
+                <button type="button" onclick="errouAPergunta()">Char</button>
+                <button type="button" onclick="acertouAPergunta2()">String</button>
+                <button type="button" onclick="errouAPergunta()">Long</button>
             </div>
         </div>
     </div>  
       
-    <div class="pergunta" >
+    <div class="pergunta" style="display:none" id="pergunta3">
       <p>Qual dessas tags cria uma lista não numerada?</p>
-      <div class="respostas">
+      <div class="respostas" >
           <div>
-              <button type="button">ol</button>
-              <button type="button">div</button>
-              <button type="button">ul</button>
-              <button type="button">span</button>
+              <button type="button" onclick="errouAPergunta()">ol</button>
+              <button type="button" onclick="errouAPergunta()">div</button>
+              <button type="button" onclick="acertouAPergunta3()">ul</button>
+              <button type="button" onclick="errouAPergunta()">span</button>
           </div>
       </div>
       <script src="../controller/index.js"></script>

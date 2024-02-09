@@ -3,6 +3,12 @@ let buttonComoJogar = document.querySelector('#efeitosonoro2');
 let buttonCreditos = document.querySelector('#efeitosonoro3');
 let audioArray = document.getElementsByTagName('audio');
 let divPergunta = document.querySelector('.pergunta');
+let credits = document.querySelector('#credits');
+let instructions = document.querySelector('#instructions');
+let pergunta1 = document.querySelector('#pergunta1')
+let pergunta2 = document.querySelector('#pergunta2')
+let pergunta3 = document.querySelector('#pergunta3')
+
 
 // Esse audio vão tocar quando o usuario passar o mause nos buttons
 buttonComeçar.addEventListener('mouseenter', () => {
@@ -24,4 +30,40 @@ function clicouEmComecar() {
     divPergunta.style.display = 'block';
 }
 
+function clicouEmCreditos() {
 
+    const telaInicial = document.getElementById('telaInicial');
+    telaInicial.style.display = 'none';
+    credits.style.display = 'flex';
+
+}
+
+function clicouEmComoJogar() {
+    const telaInicial = document.getElementById('telaInicial');
+    telaInicial.style.display = 'none';
+    instructions.style.display = 'flex';
+}
+
+function acertouAPergunta1() {
+    pergunta1.style.display ='none';
+    pergunta2.style.display ='flex';
+}
+
+function errouAPergunta() {
+    pergunta1.style.display ='none';
+    pergunta2.style.display ='none';
+    pergunta3.style.display ='none';
+    telaInicial.style.display = 'flex';
+
+
+}
+function acertouAPergunta2() {
+    pergunta2.style.display ='none';
+    pergunta3.style.display ='flex';
+  }
+
+  function acertouAPergunta3() {
+    pergunta3.style.display ='none'
+    telaInicial.style.display = 'flex';
+    console.log("Acertou")
+  }
