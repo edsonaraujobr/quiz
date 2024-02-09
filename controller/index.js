@@ -45,11 +45,13 @@ function clicouEmComoJogar() {
 }
 
 function acertouAPergunta1() {
+    alert("Você acertou a pergunta, vamos para a proxima questão")
     pergunta1.style.display ='none';
     pergunta2.style.display ='flex';
 }
 
 function errouAPergunta() {
+    alert("Você errou, tente novamente")
     pergunta1.style.display ='none';
     pergunta2.style.display ='none';
     pergunta3.style.display ='none';
@@ -58,11 +60,13 @@ function errouAPergunta() {
 
 }
 function acertouAPergunta2() {
+    alert("Você acertou a pergunta, vamos para a proxima questão")
     pergunta2.style.display ='none';
     pergunta3.style.display ='flex';
   }
 
   function acertouAPergunta3() {
+    alert("Parabéns você acertou todas as questões")
     pergunta3.style.display ='none'
     telaInicial.style.display = 'flex';
     console.log("Acertou")
