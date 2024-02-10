@@ -5,15 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../model/index.css">
     <link rel="stylesheet" href="../model/comojogar.css">
+    <link rel="stylesheet" href="../model/creditos.css">
+    <link rel="shortcut icon" href="../imagens/icon.png" type="image/png">
+
     <title>QuizScript</title>
 </head>
 <body>
+  <audio src="../audios/musicadetema.mp3" autoplay loop></audio>
+  <audio src="../audios/buttonEfeito.mp3"></audio>
+  <audio src="../audios/startEfeito.mp3"></audio>
+  <audio src="../audios/winsEfeito.mp3"></audio>
+  <audio src="../audios/errorEfeito.mp3"></audio>
+  
     <!--Essa é a primeira div que aparece-->
     <div id="telaInicial">
-      <audio src="../audios/musicadetema.mp3" autoplay loop></audio>
-      <audio src="../audios/buttonEfeito.mp3"></audio>
-      <audio src="../audios/startEfeito.mp3"></audio>
-
       <header>
           <h1>QuizScript</h1>
       </header>
@@ -29,28 +34,33 @@
       </footer>
   </div>
 
-    <!--Essa div só vai aparecer quando o usuario clicar no button Iniciar-->
-     <div class="pergunta" style="display: none;" id="pergunta1">
-        <p>Fazem parte dos elementos do javascript, exceto?</p>
-        <div class="respostas">
-            <div>
-                <button type="button" onclick="errouAPergunta()">Var</button>
-                <button type="button" onclick="errouAPergunta()">Console.log() </button>
-                <button type="button" onclick="errouAPergunta()">Justify-content </button>
-                <button type="button" onclick="acertouAPergunta1()">Linguagem de alto nível</button>
-            </div>
-        </div>
-    </div>
-
     <!--Essa div só vai aparecer quando o usuario clicar no button Como jogar-->
-    <section id="instructions" style="display: none;">
-        <div class="main">
-          <div class="main-icon">
-            <!--Esse svg é o botão pra fechar-->
-            <svg xmlns="http://www.w3.org/2000/svg" class="ionicon" height="32" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="20" d="M368 368L144 144M368 144L144 368"/></svg>
-          </div>
-          <div class="main-ins">
-            <h1 class="title-ins">QuizScript</h1>
+        <div class="instructions" style="display: none;">
+          <header class="cabecalho" >
+            <h1 class="titulo">QuizScript</h1>
+
+            <div class="icone-fechar">
+              <svg
+                class="fechar"
+                onclick="clicouEmVoltarTelaIniciaL()"
+                xmlns="http://www.w3.org/2000/svg"
+                class="ionicon"
+                height="32"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="20"
+                  d="M368 368L144 144M368 144L144 368"
+                />
+              </svg>
+            </div>
+          </header>
+
+          <main class="main-ins">
             <ul>
               <li>
                 <span>Começando:</span>
@@ -107,32 +117,37 @@
                 para responder as pergunta do QuizScript. Divirta-se! 🚀
               </p>
             </ul>
-          </div>
+          </main>
+
         </div>
-      </section>
 
     <!--Essa div só vai aparecer quando o usuario clicar no button credits-->
-      <section id="credits" style="display: none;">
-        <div class="about">
-          <div class="close-icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="ionicon"
-              height="32"
-              viewBox="0 0 512 512"
-            >
-              <path
-                fill="none"
-                stroke="currentColor"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="20"
-                d="M368 368L144 144M368 144L144 368"
-              />
-            </svg>
-          </div>
-          <div class="main-cred">
-            <h1 class="title-cred">CRÉDITOS</h1>
+        <div class="credits" style="display: none;">
+          <header class="cabecalho" >
+            <h1 class="titulo">QuizScript</h1>
+
+            <div class="icone-fechar">
+              <svg
+                class="fechar"
+                onclick="clicouEmVoltarTelaIniciaL()"
+                xmlns="http://www.w3.org/2000/svg"
+                class="ionicon"
+                height="32"
+                viewBox="0 0 512 512"
+              >
+                <path
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="20"
+                  d="M368 368L144 144M368 144L144 368"
+                />
+              </svg>
+            </div>
+          </header>
+
+          <main class="main-cred">
             <ul class="ul-cred">
               <p>
                 Olá gênio da programação! Espero que tenha se divertido com nossas
@@ -143,9 +158,8 @@
   
               <p>
                 Gostaríamos muito do seu feedback em relação ao nosso quiz, então,
-                qualquer sugestão, dúvida ou melhoria pode enviar no nosso link
-                abaixo =) >
-                <a href="http://google.com" target="_blank">Clique aqui</a>
+                qualquer sugestão, dúvida ou melhoria, acesse o nosso repositório no
+                <a class="link" href="https://github.com/edsonaraujoneto/projeto-final-modulo01" target="_blank"> GitHub</a>
               </p>
   
               <span>Sobre o jogo</span>
@@ -159,41 +173,56 @@
   
               <span>Sobre nós</span>
               <p>
-                Quiz foi elaborado pela a equipe 4 da turma Programadores do
-                Amanhã PdA.
+                Quiz foi elaborado pela a <strong>equipe 4</strong> da turma <a class="link" href="https://programadoresdoamanha.org/" target="_blank">
+                  Programadores do
+                  Amanhã
+                </a> .
               </p>
               <p>
-                integrantes: Alexsandro Palmeira de Santana Filho, Ana Caroline de
-                Souza Lisboa, Caio Eduardo Martins da Silva, Edson Araújo de Souza
-                Neto, Reury Cardoso de Lima.
+                Integrantes: <a href="https://github.com/Alexpsf" target="_blank">Alexsandro Palmeira de Santana Filho</a>, <a href="https://github.com/Anacarolinelis" target="_blank">
+                Ana Caroline de Souza Lisboa </a>, <a href="https://github.com/Caioedumartins" target="_blank">Caio Eduardo Martins da Silva</a>, <a href="https://github.com/edsonaraujoneto" target="_blank">Edson Araújo de Souza Neto</a>
+                , <a href="https://github.com/reury-cardoso" target="_blank">Reury Cardoso de Lima</a> e <a href="https://github.com/Oisaa2" target="_blank">Isabela Karoline Moura Silva</a>.
               </p>
             </ul>
-          </div>
+          </main>
         </div>
-      </section>
+
+      <!--Essa div só vai aparecer quando o usuario clicar no button Iniciar-->
+      <div class="pergunta" style="display: none;" id="pergunta1">
+          <p>Fazem parte do javascript, exceto?</p>
+            <div class="respostas">
+                <button type="button" onclick="errouAPergunta()">Var</button>
+                <button type="button" onclick="errouAPergunta()">Console.log() </button>
+            </div>
+            <div class="respostas">
+                <button type="button" onclick="errouAPergunta()">Function </button>
+                <button type="button" onclick="acertouAPergunta1()">Justify-content </button>
+            </div>
+      </div>
 
       <div class="pergunta" style="display:none" id="pergunta2">
         <p>Qual o principal tipo de dado no Javascript?</p>
         <div class="respostas">
-            <div>
-                <button type="button" onclick="errouAPergunta()">Int</button>
-                <button type="button" onclick="errouAPergunta()">Char</button>
-                <button type="button" onclick="acertouAPergunta2()">String</button>
-                <button type="button" onclick="errouAPergunta()">Long</button>
-            </div>
+            <button type="button" onclick="errouAPergunta()">Int</button>
+            <button type="button" onclick="errouAPergunta()">Char</button>
+        </div>
+        <div class="respostas">
+            <button type="button" onclick="acertouAPergunta2()">String</button>
+            <button type="button" onclick="errouAPergunta()">Long</button>
         </div>
     </div>  
       
     <div class="pergunta" style="display:none" id="pergunta3">
       <p>Qual dessas tags cria uma lista não numerada?</p>
       <div class="respostas" >
-          <div>
-              <button type="button" onclick="errouAPergunta()">ol</button>
-              <button type="button" onclick="errouAPergunta()">div</button>
-              <button type="button" onclick="acertouAPergunta3()">ul</button>
-              <button type="button" onclick="errouAPergunta()">span</button>
-          </div>
+          <button type="button" onclick="errouAPergunta()">ol</button>
+          <button type="button" onclick="errouAPergunta()">div</button>
       </div>
+      <div class="respostas" >
+          <button type="button" onclick="acertouAPergunta3()">ul</button>
+          <button type="button" onclick="errouAPergunta()">span</button>
+      </div>
+      
       <script src="../controller/index.js"></script>
 </body>
 </html>
