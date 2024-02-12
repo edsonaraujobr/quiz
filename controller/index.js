@@ -8,8 +8,7 @@ let instructions = document.querySelector('.instructions');
 let pergunta1 = document.querySelector('#pergunta1')
 let pergunta2 = document.querySelector('#pergunta2')
 let pergunta3 = document.querySelector('#pergunta3')
-const nome = prompt("Bem vindo ao QuizScript, digite seu nome");
-
+const nome = null
 // Esse audio vão tocar quando o usuario passar o mause nos buttons
 buttonComeçar.addEventListener('mouseenter', () => {
     audioArray[1].play();
@@ -27,7 +26,8 @@ function clicouEmComecar() {
     audioArray[2].play(); // Quando o usuario clicar em comecar tocará esse audio >> E ele será direionado para o painel da primeira pergunta
     const telaInicial = document.getElementById('telaInicial');
     telaInicial.style.display = 'none';
-    divPergunta.style.display = 'block';
+    divPergunta.style.display = 'flex';
+    nome = prompt("Bem vindo ao QuizScript, digite seu nome");
 }
 
 function clicouEmComoJogar() {
@@ -46,14 +46,14 @@ function clicouEmCreditos() {
 
 function acertouAPergunta1() {
     audioArray[2].play();
-    alert(`${nome} parabéns,voce acertou! vamos para a proxima questão?`)
+    alert(`${nome ?? 'Fulano'} parabéns,você acertou! vamos para a proxima questão?`)
     pergunta1.style.display ='none';
     pergunta2.style.display ='flex';
 }
 
 function errouAPergunta() {
     audioArray[4].play();
-    alert(`${nome}, você errou! Tente novamente`)
+    alert(`${nome ?? 'Fulano'}, você errou! Tente novamente`)
     pergunta1.style.display ='none';
     pergunta2.style.display ='none';
     pergunta3.style.display ='none';
@@ -62,14 +62,14 @@ function errouAPergunta() {
 
 function acertouAPergunta2() {
     audioArray[2].play();
-    alert(`${nome} parabéns, você acertou! vamos para a proxima questão?`)
+    alert(`${nome ?? 'Fulano'} parabéns, você acertou! vamos para a proxima questão?`)
     pergunta2.style.display ='none';
     pergunta3.style.display ='flex';
 }
 
 function acertouAPergunta3() {
     audioArray[3].play();
-    alert(`${nome} parabéns por ter chegado até aqui! Você venceu! `)
+    alert(`${nome ?? 'Fulano'} parabéns por ter chegado até aqui! Você venceu! `)
     pergunta3.style.display ='none'
     telaInicial.style.display = 'flex';
 }

@@ -121,11 +121,6 @@ footer, p {
         background-color: var(--corprincipal);
         color: var(--corbranca);
     }
-
-    .respostas {
-        background-color: red;
-        /* flex: 1; */
-    }
 }
 
 @media (max-width: 500px) {
