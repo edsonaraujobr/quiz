@@ -8,7 +8,7 @@ let instructions = document.querySelector('.instructions');
 let pergunta1 = document.querySelector('#pergunta1')
 let pergunta2 = document.querySelector('#pergunta2')
 let pergunta3 = document.querySelector('#pergunta3')
-const nome = null
+let nome = null
 
 // Esse audio vão tocar quando o usuario passar o mause nos buttons
 buttonComeçar.addEventListener('mouseenter', () => {
@@ -24,11 +24,15 @@ buttonCreditos.addEventListener('mouseenter', () => {
 });
 
 function clicouEmComecar() {
+    nome = prompt("Bem vindo ao QuizScript, digite seu nome"); 
+    while (nome === '' || nome.length <= 3) {
+        alert('ERRO! Digite um nome válido')
+        nome = prompt("Bem vindo ao QuizScript, digite seu nome"); 
+    }
     audioArray[2].play(); // Quando o usuario clicar em comecar tocará esse audio >> E ele será direionado para o painel da primeira pergunta
     const telaInicial = document.getElementById('telaInicial');
     telaInicial.style.display = 'none';
     divPergunta.style.display = 'flex';
-    nome = prompt("Bem vindo ao QuizScript, digite seu nome");
 }
 
 function clicouEmComoJogar() {
