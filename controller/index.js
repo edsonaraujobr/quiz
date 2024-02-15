@@ -9,6 +9,7 @@ let pergunta1 = document.querySelector('#pergunta1')
 let pergunta2 = document.querySelector('#pergunta2')
 let pergunta3 = document.querySelector('#pergunta3')
 const nome = null
+
 // Esse audio vão tocar quando o usuario passar o mause nos buttons
 buttonComeçar.addEventListener('mouseenter', () => {
     audioArray[1].play();
