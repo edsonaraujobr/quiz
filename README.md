@@ -13,7 +13,7 @@ a liberdade de codar o horário que quiser.
 ![Captura de tela de 2024-02-15 15-39-56](https://github.com/edsonaraujoneto/quiz-projetofinal-m1-pda/assets/137104822/2108f8d1-d8a7-4e89-9ea0-aecbb8f7c048)
 
 
-Para acessar o Quiz, [clique aqui](https://edsonaraujoneto.github.io/quiz-projetofinal-m1-pda/)
+Para acessar o Quiz, [clique aqui](https://edsonaraujobr.github.io/quiz-projetofinal-m1-pda/)
 
 
 # Tecnologias Utilizadas 🖥
